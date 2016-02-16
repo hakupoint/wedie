@@ -2,7 +2,7 @@
 import {signature} from '../util/signature.js';
 import {reply} from '../util/message.js';
 
-module.exports = exports = (app,express) => {
+export function route(app,express){
   app.get('/',(req,res)=>{
       signature(req,res);
   });

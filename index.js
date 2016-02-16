@@ -3,10 +3,10 @@ import express from "express";
 import {port} from './config/setting.js';
 import './models/index.js';
 import {loadModule} from './lib/express.js';
-
+import {route} from './routes/index.js';
 let app      = express();
 loadModule(app,express)
-require('./routes/index.js')(app,express);
+route(app,express);
 
 
 app.use((err, req, res, next) =>{
